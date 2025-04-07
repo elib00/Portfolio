@@ -1,103 +1,93 @@
 import Image from "next/image";
+import { Code } from "lucide-react";
+import { FaReact } from "react-icons/fa"; // React icon
+import { SiNextdotjs } from "react-icons/si"; // Next.js icon
+import { SiDjango } from "react-icons/si"; // Django icon
+import { LuCalendar, LuComputer, LuSmile, LuAward } from "react-icons/lu"; // From Lucide
+
+import TechSkillsSection from "./components/TechSkillsSection"; // Import your EducationSection component
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex flex-col h-auto items-center justify-center gap-y-3">
+      {/* first section */}
+      <div className="flex w-full items-center h-116 justify-center text-white bg-black gap-4 rounded-lg">
+        {/* profile picture side */}
+        <div className="flex-1 h-full flex justify-center items-center p-4 box-border bg-gradient-to-br from-black to-[#1f642e] via-[#053a35] rounded-l-lg">
+          {/* wrapper for placing the icon relatively*/}
+          <div className="relative flex items-center justify-center">
+            <div className="relative w-80 h-80 rounded-full overflow-hidden border-2 border-gray-300 bg-black flex items-center justify-center">
+              <Image
+                src="/profile.png"
+                alt="Profile"
+                // fill
+                width={280}
+                height={280}
+                className="object-cover"
+              />
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {/* code icon */}
+            <div className="h-20 w-20 absolute bottom-2 right-2 bg-green-900 text-white p-2 rounded-full shadow z-10 flex items-center justify-center">
+                  <Code size={50} strokeWidth={2.5}  />
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        {/* text side */}
+        <div className="flex-1 h-full flex flex-col justify-center items-start p-4 box-border gap-0.5 rounded-r-lg">
+          <h6> <span className="text-[#845d61]">&lt;span&gt;</span> Hi, I'm Joshua <span className="text-[#845d61]">&lt;/span&gt;</span></h6>
+          <h1 className="text-3xl">Senior <span className="text-[#0a7452]">&#123;Full Stack&#125; </span></h1>
+          <h1 className="text-3xl">Web & App Developer</h1>
+          <p>
+            <span className="text-[#845d61]">&lt;p&gt;</span>
+            &nbsp;I am a passionate web developer with a knack for creating dynamic and responsive web applications. I love to explore new technologies and continuously improve my skills.&nbsp;
+            <span className="text-[#845d61]">&lt;/p&gt;</span>
+          </p>
+          <div className="flex gap-4 items-center justify-bet ween mt-4">
+            <FaReact size={25} color="#61DAFB" /> {/* React blue */}
+            <SiNextdotjs size={25}/> {/* Next.js black */}
+            <SiDjango size={25} color="#092E20" /> {/* Django green */}
+          </div>
+        </div>
+      </div>
+
+      {/* second section */}
+      <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-4 text-white bg-black rounded-lg p-6">
+        <div className="flex flex-col justify-between items-center p-4 gap-y-1">
+          <LuCalendar className="w-6 h-6 text-emerald-600"/>
+          <h3 className="text-xl">
+            3+
+          </h3>
+          <small className="text-sm">Years of experience</small>
+        </div>
+
+        <div className="flex flex-col justify-between items-center p-4 gap-y-1">
+          <LuComputer className="w-6 h-6 text-emerald-600"/>
+          <h3 className="text-xl">
+            150+
+          </h3>
+          <small className="text-sm">Projects Completed</small>
+        </div>
+
+        <div className="flex flex-col justify-between items-center p-4 gap-y-1">
+          <LuSmile className="w-6 h-6 text-emerald-600"/>
+          <h3 className="text-xl">
+            300+
+          </h3>
+          <small className="text-sm">Satisfied Clients</small>
+        </div>
+
+        <div className="flex flex-col justify-between items-center p-4 gap-y-1">
+          <LuAward className="w-6 h-6 text-emerald-600"/>
+          <h3 className="text-xl">
+            18+
+          </h3>
+          <small className="text-sm">Award Winners</small>
+        </div>
+      </div>
+
+      {/* third section */}
+      <TechSkillsSection />
     </div>
   );
 }
