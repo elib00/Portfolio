@@ -35,7 +35,7 @@ export default function Home() {
         </div>
         {/* text side */}
         <div className="flex-1 h-full flex flex-col justify-center items-start p-4 box-border gap-2 rounded-b-lg">
-          <h6> <span className="text-[#845d61]">&lt;span&gt;</span> Hi, I'm Joshua <span className="text-[#845d61]">&lt;/span&gt;</span></h6>
+          <h6> <span className="text-[#845d61]">&lt;span&gt;</span> Hi, I am Joshua <span className="text-[#845d61]">&lt;/span&gt;</span></h6>
           <h1 className="text-4xl">Aspiring <span className="text-[#0a7452]">&#123;Full Stack&#125; </span></h1>
           <h1 className="text-4xl">Web & Mobile Developer</h1>
           <p>
