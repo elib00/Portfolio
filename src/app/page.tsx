@@ -1,8 +1,5 @@
 import Image from "next/image";
 import { Code } from "lucide-react";
-import { FaReact } from "react-icons/fa"; // React icon
-import { SiNextdotjs } from "react-icons/si"; // Next.js icon
-import { SiDjango } from "react-icons/si"; // Django icon
 import { LuCalendar, LuComputer, LuSmile, LuAward } from "react-icons/lu"; // From Lucide
 
 import TechSkillsSection from "./components/TechSkillsSection";
